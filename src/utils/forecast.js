@@ -10,8 +10,8 @@ const forecast = (latitude,longitude, callback) =>{
             callback('Unable to find the location',undefined)
         }
         else{
-            
-            callback(undefined,body.daily.data[0].summary+' It is currently '+body.currently.temperature + ' degrees out. There is a '+ (body.currently.precipProbability)*100+'% chance of precitipation.')
+            let dailyData = body.daily.data[0]
+            callback(undefined,dailyData.summary+' It is currently '+body.currently.temperature + ' degrees out. There is a '+ (body.currently.precipProbability)*100+'% chance of precitipation. Maximum temperature will be '+dailyData.temperatureMax+'.')
         }
         //console.log(data.currently);
         
