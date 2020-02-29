@@ -11,7 +11,7 @@ const forecast = (latitude,longitude, callback) =>{
         }
         else{
             
-            callback(undefined,body.daily.data[0].summary+' it is currently '+body.currently.temperature + ' degrees out there is a '+ body.currently.precipProbability+' precitipation probability')
+            callback(undefined,body.daily.data[0].summary+' It is currently '+body.currently.temperature + ' degrees out. There is a '+ (body.currently.precipProbability)*100+'% chance of precitipation.')
         }
         //console.log(data.currently);
         

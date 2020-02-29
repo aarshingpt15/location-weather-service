@@ -41,10 +41,6 @@ app.get('/weather', (req,res) =>{
             })
         })
     })
-   // res.send({forescast : "its raining",
-    //address: req.query.address
-
-    //})
 })
 
 
